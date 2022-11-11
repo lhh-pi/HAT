@@ -6,6 +6,7 @@ wandb/*
 tmp/*
 modify_model.py
 hat/version.py
+.idea/
 
 *.DS_Store
 

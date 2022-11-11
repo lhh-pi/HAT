@@ -10,6 +10,7 @@ import math
 from tqdm import tqdm
 from os import path as osp
 
+
 @MODEL_REGISTRY.register()
 class HATModel(SRModel):
 
@@ -104,8 +105,8 @@ class HATModel(SRModel):
 
                 # put tile into output image
                 self.output[:, :, output_start_y:output_end_y,
-                            output_start_x:output_end_x] = output_tile[:, :, output_start_y_tile:output_end_y_tile,
-                                                                       output_start_x_tile:output_end_x_tile]
+                output_start_x:output_end_x] = output_tile[:, :, output_start_y_tile:output_end_y_tile,
+                                               output_start_x_tile:output_end_x_tile]
 
     def post_process(self):
         _, _, h, w = self.output.size()
